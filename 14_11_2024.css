@@ -33,6 +33,10 @@ p.centered {
     text-shadow: 2px 2px yellow;
 }
 
+.center-text {
+    text-align: center;
+}
+
 .center-icon img {
     display: inline-block;
     margin: 0 auto;
