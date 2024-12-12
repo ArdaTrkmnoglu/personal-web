@@ -8,7 +8,27 @@
 
     </head>
 
-    <body>
+    <body onload="document.body.style.backgroundColor = 'pink'; welcomeFunction()"
+            onresize="document.body.style.backgroundColor = 'lightblue'"
+            onkeydown="document.body.style.backgroundColor = 'white'"
+            onkeyup="document.body.style.backgroundColor = 'lightyellow'">
+
+            <script>
+                function welcomeFunction() {
+                    alert("Welcome!");
+                }
+
+                function keydownFunction() {
+                    document.getElementById("name").style.backgroundColor = "yellow";
+                }
+
+                function keyupFunction() {
+                    document.getElementById("name").style.backgroundColor = "lightblue";
+                }
+            </script>
+
+            Enter your name: <input type="text" id="name" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
+
         <p class="center-text">
             <strong>Introduction to Information Systems</strong>
         </p>
@@ -46,7 +66,8 @@
             </ul>
         </ul>
 
-        <h1><strong>Bees</strong></h1>
+        <h1 onmouseover="style.color = 'orange'; style.backgroundColor = 'lightgreen'"
+            onmouseout="style.color = 'red'; style.backgroundColor = ''"><strong>Bees</strong></h1>
         <p><img src="bees.jpg"></p>
         <p><a href="https://en.wikipedia.org/wiki/Bee">Click here for more information</a></p>
 
