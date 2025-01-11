@@ -22,12 +22,124 @@
                 text-align: center;
                 color: darkslategray;
             }
+
+            .elements {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .buttons,
+            .game-parameters,
+            .input-partition {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                padding: 16px;
+                border-radius: 20px;
+                min-width: 100px;
+                min-height: 70px;
+                margin-left: 13px;
+                margin-right: 13px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .buttons {
+                padding: 16px;
+                gap: 4px;
+            }
+
+            .letters {
+                width: 150px;
+                height: 150px;
+                padding: 10px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            .hidden {
+                opacity: 0;
+                pointer-events: none;
+                width: 150px;
+                height: 150px;
+                border-radius: 20px;
+                border: 2px groove black;
+                padding: 10px;
+                margin-left: 3px;
+                margin-right: 3px;
+                background-color: rgb(90, 240, 90);
+            }
+
+            .hidden-button button {
+                display: none;
+            }
+
+            .letter-container {
+                width: 150px;
+                height: 150px;
+                display: flexbox;
+                float: left;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                border-radius: 20px;
+                border: 2px groove black;
+                background-color: rgb(90, 240, 90);
+                padding: 10px;
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+
+            #submit-btn,
+            #reset-btn {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 16px;
+            }
         </style>
     </head>
 
     <body>
         <h1>.: WORD PREDICTION GAME :.</h1>
-       
+        <div>
+            <div class="letter-container">
+                <img class="hidden" src="p.svg" id="p-letter">
+            </div>
+            <div class="letter-container">
+                <img class="hidden" src="r.svg" id="r-letter">
+            </div>
+            <div class="letter-container">
+                <img class="hidden" src="i.svg" id="i-letter">
+            </div>
+            <div class="letter-container">
+                <img class="hidden" src="s.svg" id="s-letter">
+            </div>
+            <div class="letter-container">
+                <img class="hidden" src="m.svg" id="m-letter">
+            </div>
+        </div>
+        <div class="elements">
+            <div class="buttons">
+                <button id="submit-btn">Submit</button>
+                <button class="hidden-button" id="reset-btn">Reset</button>
+            </div>
+            <div class="input-partition">
+                <label for="guess-box">Prediction: </label>
+                <input id="guess-box" type="text" placeholder="Enter your guess here">
+            </div>
+            <div class="game-parameters">
+                <a id="score">Score: 0</a>
+                <br>
+                <div id="hearts">
+                    <img src="heart.svg" class="heart">
+                    <img src="heart.svg" class="heart">
+                    <img src="heart.svg" class="heart">
+                </div>
+            </div>
+        </div>
         <a class="main-page" href="index.html">❖ Main Page ❖</a>
 
         <script src="wordgamescript.js"></script>
