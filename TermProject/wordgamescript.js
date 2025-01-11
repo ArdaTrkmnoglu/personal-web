@@ -1,4 +1,10 @@
-const letters = [document.getElementById("p-letter"), document.getElementById("r-letter"), document.getElementById("i-letter"), document.getElementById("s-letter"), document.getElementById("m-letter")];
+const letters = [
+    document.getElementById("p-letter"), 
+    document.getElementById("r-letter"), 
+    document.getElementById("i-letter"), 
+    document.getElementById("s-letter"), 
+    document.getElementById("m-letter")
+];
 const submitButton = document.getElementById("submit-btn");
 const resetButton = document.getElementById("reset-btn");
 const guessBox = document.getElementById("guess-box");
@@ -53,6 +59,23 @@ submitButton.addEventListener("click", () => {
     const guess = guessBox.value.toLowerCase();
     if (guess.length !== 1 && guess.length !== 5) {
         alert("Please enter a single letter or the whole word.");
+        return;
+    }
+
+    if (guess.length === 5 && guess === word) {
+        score = 100;
+        updateScore();
+        letters.forEach(img => img.classList.remove("hidden"));
+        alert("Congratulations! You won the game!");
+        submitButton.disabled = true;
+        return;
+    }
+    else if (guess.length === 5 && guess !== word) {
+        lives--;
+        lives--;
+        lives--;
+        updateHearts();
+        alert("Game Over! You guessed the wrong word.");
         return;
     }
 
