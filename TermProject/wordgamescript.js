@@ -16,6 +16,14 @@ let score = 0;
 let lives = 3;
 let openLetters = 0;
 
+input = document.getElementById("guess-box");
+input.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("submit-btn").click();
+    }
+})
+
 function updateScore() {
     scoreContainer.textContent = `Score: ${score}`;
 }
@@ -105,6 +113,7 @@ resetButton.addEventListener("click", () => {
     submitButton.disabled = false;
     letters.forEach(img => img.classList.add("hidden"));
     guessBox.value = "";
+    resetButton.style.display = "none"
 });
 
 updateScore();
