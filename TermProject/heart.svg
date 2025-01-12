@@ -27,99 +27,18 @@
      inkscape:cx="16.277716"
      inkscape:cy="12.472907"
      inkscape:window-width="1712"
-     inkscape:window-height="983"
+     inkscape:window-height="981"
      inkscape:window-x="0"
      inkscape:window-y="43"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer2" />
+     inkscape:current-layer="layer1" />
   <defs
-     id="defs1">
-    <meshgradient
-       inkscape:collect="always"
-       id="meshgradient14"
-       gradientUnits="userSpaceOnUse"
-       x="104.3682"
-       y="107.41032"
-       gradientTransform="matrix(0.10501153,0,0,0.13141879,-3.7776887,-11.365944)">
-      <meshrow
-         id="meshrow4057">
-        <meshpatch
-           id="meshpatch4057">
-          <stop
-             path="c 0,15.1211  -25.7113,34.5847  -28.0811,32.9373"
-             style="stop-color:#ffffff;stop-opacity:1"
-             id="stop4057" />
-          <stop
-             path="l 0.000175,-32.9373"
-             style="stop-color:#ff0000;stop-opacity:1"
-             id="stop4058" />
-          <stop
-             path="l 0,0"
-             style="stop-color:#ffffff;stop-opacity:1"
-             id="stop4059" />
-          <stop
-             path="l 28.0809,0"
-             style="stop-color:#ff0000;stop-opacity:1"
-             id="stop4060" />
-        </meshpatch>
-        <meshpatch
-           id="meshpatch4060">
-          <stop
-             path="c -2.62734,1.64689  -28.0811,-17.8162  -28.0811,-32.9373"
-             id="stop4061" />
-          <stop
-             path="l 28.0811,0"
-             style="stop-color:#ffffff;stop-opacity:1"
-             id="stop4062" />
-          <stop
-             path="l 0.000175,0"
-             style="stop-color:#ff0000;stop-opacity:1"
-             id="stop4063" />
-        </meshpatch>
-        <meshpatch
-           id="meshpatch4063">
-          <stop
-             path="c 2.13163e-14,-19.8558  24.5835,-6.07059  28.3387,4.52888"
-             id="stop4064" />
-          <stop
-             path="l -0.25808,-4.52888"
-             style="stop-color:#ff0000;stop-opacity:1"
-             id="stop4065" />
-          <stop
-             path="l 0.00048,0"
-             style="stop-color:#ffffff;stop-opacity:1"
-             id="stop4066" />
-        </meshpatch>
-        <meshpatch
-           id="meshpatch4066">
-          <stop
-             path="c 3.46345,-10.4713  27.8235,-25.0023  27.8235,-4.52888"
-             id="stop4067" />
-          <stop
-             path="l -28.0811,0"
-             style="stop-color:#ffffff;stop-opacity:1"
-             id="stop4068" />
-          <stop
-             path="l -0.00048,0"
-             style="stop-color:#ff0000;stop-opacity:1"
-             id="stop4069" />
-        </meshpatch>
-      </meshrow>
-    </meshgradient>
-  </defs>
+     id="defs1" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:none">
-    <ellipse
-       style="fill:url(#meshgradient14);fill-opacity:1;fill-rule:evenodd;stroke-width:0.0310822"
-       id="path1"
-       cx="4.2333331"
-       cy="2.7497914"
-       rx="2.9489999"
-       ry="4.9508085" />
-  </g>
+     style="display:inline" />
   <g
      inkscape:groupmode="layer"
      id="layer2"

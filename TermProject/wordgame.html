@@ -7,14 +7,6 @@
             body {
                 background-image: url("leaves.png");
                 background-repeat: repeat;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-                box-sizing: border-box;
             }
 
             h1 {
@@ -29,6 +21,22 @@
                 font-weight: bold;
                 text-align: center;
                 color: darkslategray;
+            }
+
+            .center {
+                text-align: center;
+                align-items: center;
+            }
+
+            .game-area {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                box-sizing: border-box;
             }
 
             .elements {
@@ -112,43 +120,48 @@
 
     <body>
         <h1>.: WORD PREDICTION GAME :.</h1>
-        <div>
-            <div class="letter-container">
-                <img class="hidden" src="p.svg" id="p-letter">
+        <div class="game-area">
+            <div>
+                <div class="letter-container">
+                    <img class="hidden" src="p.svg" id="p-letter">
+                </div>
+                <div class="letter-container">
+                    <img class="hidden" src="r.svg" id="r-letter">
+                </div>
+                <div class="letter-container">
+                    <img class="hidden" src="i.svg" id="i-letter">
+                </div>
+                <div class="letter-container">
+                    <img class="hidden" src="s.svg" id="s-letter">
+                </div>
+                <div class="letter-container">
+                    <img class="hidden" src="m.svg" id="m-letter">
+                </div>
             </div>
-            <div class="letter-container">
-                <img class="hidden" src="r.svg" id="r-letter">
-            </div>
-            <div class="letter-container">
-                <img class="hidden" src="i.svg" id="i-letter">
-            </div>
-            <div class="letter-container">
-                <img class="hidden" src="s.svg" id="s-letter">
-            </div>
-            <div class="letter-container">
-                <img class="hidden" src="m.svg" id="m-letter">
-            </div>
-        </div>
-        <div class="elements">
-            <div class="buttons">
-                <button id="submit-btn">Submit</button>
-                <button class="hidden-button" id="reset-btn">Reset</button>
-            </div>
-            <div class="input-partition">
-                <label for="guess-box">Prediction: </label>
-                <input id="guess-box" type="text" placeholder="Enter your guess here">
-            </div>
-            <div class="game-parameters">
-                <a id="score">Score: 0</a>
-                <br>
-                <div id="hearts">
-                    <img src="heart.svg" class="heart">
-                    <img src="heart.svg" class="heart">
-                    <img src="heart.svg" class="heart">
+            <p>&nbsp;</p>
+            <div class="elements">
+                <div class="buttons">
+                    <button id="submit-btn">Submit</button>
+                    <button class="hidden-button" id="reset-btn">Reset</button>
+                </div>
+                <div class="input-partition">
+                    <label for="guess-box">Prediction: </label>
+                    <input id="guess-box" type="text" placeholder="Enter your guess here">
+                </div>
+                <div class="game-parameters">
+                    <a id="score">Score: 0</a>
+                    <br>
+                    <div id="hearts">
+                        <img src="heart.svg" class="heart">
+                        <img src="heart.svg" class="heart">
+                        <img src="heart.svg" class="heart">
+                    </div>
                 </div>
             </div>
         </div>
-        <a class="main-page" href="index.html">❖ Main Page ❖</a>
+        <div class="center">
+            <a class="main-page" href="index.html">❖ Main Page ❖</a>
+        </div>
 
         <script src="wordgamescript.js"></script>
     </body>
