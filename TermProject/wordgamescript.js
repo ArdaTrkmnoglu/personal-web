@@ -12,6 +12,7 @@ const letterBoxes = [
     document.getElementById("s-box"), 
     document.getElementById("m-box")
 ];
+
 const submitButton = document.getElementById("submit-btn");
 const resetButton = document.getElementById("reset-btn");
 const guessBox = document.getElementById("guess-box");
