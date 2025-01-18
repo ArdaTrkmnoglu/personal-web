@@ -5,6 +5,13 @@ const letters = [
     document.getElementById("s-letter"), 
     document.getElementById("m-letter")
 ];
+const letterBoxes = [
+    document.getElementById("p-box"), 
+    document.getElementById("r-box"), 
+    document.getElementById("i-box"), 
+    document.getElementById("s-box"), 
+    document.getElementById("m-box")
+];
 const submitButton = document.getElementById("submit-btn");
 const resetButton = document.getElementById("reset-btn");
 const guessBox = document.getElementById("guess-box");
@@ -43,6 +50,8 @@ function revealLetter(guess) {
     for (let i = 0; i < word.length; i++) {
         if (word[i] === guess.toLowerCase() && letters[i].classList.contains("hidden")) {
             letters[i].classList.remove("hidden");
+            letterBoxes[i].classList.remove("letter-container");
+            letterBoxes[i].classList.add("open-letter-container");
             correctGuess = true;
             openLetters++;
         }
@@ -74,6 +83,8 @@ submitButton.addEventListener("click", () => {
         score = 100;
         updateScore();
         letters.forEach(img => img.classList.remove("hidden"));
+        letterBoxes.forEach(img => img.classList.remove("letter-container"));
+        letterBoxes.forEach(img => img.classList.add("open-letter-container"));
         alert("Congratulations! You won the game!");
         submitButton.disabled = true;
         return;
@@ -84,6 +95,7 @@ submitButton.addEventListener("click", () => {
         lives--;
         updateHearts();
         alert("Game Over! You guessed the wrong word.");
+        submitButton.disabled = true;
         return;
     }
 
@@ -112,6 +124,8 @@ resetButton.addEventListener("click", () => {
     updateHearts();
     submitButton.disabled = false;
     letters.forEach(img => img.classList.add("hidden"));
+    letterBoxes.forEach(img => img.classList.remove("open-letter-container"));
+    letterBoxes.forEach(img => img.classList.add("letter-container"));
     guessBox.value = "";
     resetButton.style.display = "none"
 });

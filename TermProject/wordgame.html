@@ -87,7 +87,6 @@
                 padding: 10px;
                 margin-left: 3px;
                 margin-right: 3px;
-                background-color: rgb(121, 207, 137);
             }
 
             .hidden-button button {
@@ -104,7 +103,24 @@
                 position: relative;
                 border-radius: 20px;
                 border: 2px groove black;
-                background-color: rgb(121, 207, 137);
+                background-color: rgb(234, 221, 143);
+                background-image: url(honeycomb.svg);
+                padding: 10px;
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+
+            .open-letter-container {
+                width: 150px;
+                height: 150px;
+                display: flexbox;
+                float: left;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                border-radius: 20px;
+                border: 2px groove black;
+                background-color: rgb(234, 221, 143);
                 padding: 10px;
                 margin-left: 3px;
                 margin-right: 3px;
@@ -122,19 +138,19 @@
         <h1>.: WORD PREDICTION GAME :.</h1>
         <div class="game-area">
             <div>
-                <div class="letter-container">
+                <div class="letter-container" id="p-box">
                     <img class="hidden" src="p.svg" id="p-letter">
                 </div>
-                <div class="letter-container">
+                <div class="letter-container" id="r-box">
                     <img class="hidden" src="r.svg" id="r-letter">
                 </div>
-                <div class="letter-container">
+                <div class="letter-container" id="i-box">
                     <img class="hidden" src="i.svg" id="i-letter">
                 </div>
-                <div class="letter-container">
+                <div class="letter-container" id="s-box">
                     <img class="hidden" src="s.svg" id="s-letter">
                 </div>
-                <div class="letter-container">
+                <div class="letter-container" id="m-box">
                     <img class="hidden" src="m.svg" id="m-letter">
                 </div>
             </div>
