@@ -39,7 +39,8 @@ h1 {
     padding: 0;
 }
 
-.navbar a, .navbar p {
+.navbar a,
+.navbar p {
     color: #000000;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -66,7 +67,7 @@ footer {
     flex-direction: row;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: hsla(0, 0%, 100%, 0.2);
+    background-color: hsla(0, 0%, 100%, 0.4);
     backdrop-filter: blur(2px);
     min-height: 100px;
 }
