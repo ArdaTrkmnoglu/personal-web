@@ -1,15 +1,15 @@
 const letters = [
-    document.getElementById("p-letter"), 
-    document.getElementById("r-letter"), 
-    document.getElementById("i-letter"), 
-    document.getElementById("s-letter"), 
+    document.getElementById("p-letter"),
+    document.getElementById("r-letter"),
+    document.getElementById("i-letter"),
+    document.getElementById("s-letter"),
     document.getElementById("m-letter")
 ];
 const letterBoxes = [
-    document.getElementById("p-box"), 
-    document.getElementById("r-box"), 
-    document.getElementById("i-box"), 
-    document.getElementById("s-box"), 
+    document.getElementById("p-box"),
+    document.getElementById("r-box"),
+    document.getElementById("i-box"),
+    document.getElementById("s-box"),
     document.getElementById("m-box")
 ];
 
@@ -25,7 +25,7 @@ let lives = 3;
 let openLetters = 0;
 
 input = document.getElementById("guess-box");
-input.addEventListener("keypress", function(event) {
+input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
         document.getElementById("submit-btn").click();

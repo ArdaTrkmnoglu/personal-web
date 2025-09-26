@@ -17,7 +17,7 @@ function start() {
 }
 
 function stop() {
-    
+
     if (isRunning) {
         clearInterval(timer);
         elapsedTime = Date.now() - startTime;
@@ -26,7 +26,7 @@ function stop() {
 }
 
 function reset() {
-    
+
     clearInterval(timer);
     startTime = 0;
     elapsedTime = 0;
@@ -49,22 +49,22 @@ function update() {
     display.textContent = `${hours}:${mins}:${secs}:${msecs}`;
 }
 
-addEventListener("keypress", function(event) {
+addEventListener("keypress", function (event) {
     if (event.key === " ") {
         event.preventDefault();
         startStopButton.click();
     }
 })
 
-addEventListener("keypress", function(event) {
+addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
         resetButton.click();
     }
 })
 
-startStopButton.addEventListener("click", function(event) {
-    
+startStopButton.addEventListener("click", function (event) {
+
     if (!isRunning) {
         start();
         event.target.style.backgroundColor = "hsl(0, 100%, 30%)";
@@ -77,7 +77,7 @@ startStopButton.addEventListener("click", function(event) {
     }
 });
 
-startStopButton.addEventListener("mouseover", function(event) {
+startStopButton.addEventListener("mouseover", function (event) {
     if (isRunning) {
         event.target.style.backgroundColor = "hsl(0, 100%, 30%)";
         event.target.textContent = "Stop";
@@ -88,7 +88,7 @@ startStopButton.addEventListener("mouseover", function(event) {
     }
 });
 
-startStopButton.addEventListener("mouseout", function(event) {
+startStopButton.addEventListener("mouseout", function (event) {
     if (isRunning) {
         event.target.style.backgroundColor = "hsl(0, 100%, 40%)";
         event.target.textContent = "Stop";

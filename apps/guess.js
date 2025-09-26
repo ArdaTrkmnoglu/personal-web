@@ -8,22 +8,22 @@ let attempts = 0;
 let guess;
 let running = true;
 
-while(running) {
+while (running) {
     guess = window.prompt(`Guess a number between ${minNum} and ${maxNum}`);
     guess = Number(guess);
 
-    if(isNaN(guess)) {
+    if (isNaN(guess)) {
         window.alert("Please enter a number");
     }
 
-    if(guess < minNum || guess > maxNum) {
+    if (guess < minNum || guess > maxNum) {
         window.alert("Please enter a valid number");
     }
     else {
-        if(guess < randomNum) {
+        if (guess < randomNum) {
             window.alert("Too low!");
         }
-        else if(guess > randomNum) {
+        else if (guess > randomNum) {
             window.alert("Too big!");
         }
         else {

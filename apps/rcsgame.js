@@ -57,7 +57,7 @@ function playGame(playerChoice) {
                     computerScore++;
                 }
                 break;
-        
+
             default:
                 break;
         }
@@ -68,6 +68,6 @@ function playGame(playerChoice) {
     resultDisplay.textContent = result;
 
     if (playerScore != 0 || computerScore != 0) {
-    resetBtn.classList.remove("hidden");
+        resetBtn.classList.remove("hidden");
     }
 }

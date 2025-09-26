@@ -13,7 +13,7 @@ weatherForm.addEventListener("submit", async event => {
         try {
             const weatherData = await getWeatherData(city);
             displayWeatherInfo(weatherData);
-        } 
+        }
         catch (error) {
             console.error(error);
             displayError(error);
@@ -25,7 +25,7 @@ weatherForm.addEventListener("submit", async event => {
 });
 
 async function getWeatherData(city) {
-    
+
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
     const response = await fetch(apiUrl);
@@ -35,14 +35,14 @@ async function getWeatherData(city) {
     }
 
     return await response.json();
-    
+
 }
 
 function displayWeatherInfo(data) {
 
-    const {name: city, 
-           main: {temp, humidity}, 
-           weather: [{description, id}]} = data;
+    const { name: city,
+        main: { temp, humidity },
+        weather: [{ description, id }] } = data;
 
     card.textContent = "";
     card.style.display = "flex";
@@ -57,7 +57,7 @@ function displayWeatherInfo(data) {
     if (String(city).endsWith("Province")) {
         cityName = cityName.slice(0, cityName.indexOf(" "))
     }
-    
+
     cityDisplay.textContent = cityName;
     tempDisplay.textContent = `${Math.round(temp - 273.15)}°C`;
     humidityDisplay.textContent = `Humidity: ${humidity}%`;
@@ -123,7 +123,7 @@ function getWeatherEmoji(weatherId) {
         case (weatherId === 804):
             return "☁️";
             break;
-    
+
         default:
             break;
     }
